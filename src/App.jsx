@@ -1,19 +1,22 @@
 import { Header } from "./Header";
 import { Content } from "./Content";
 import { Footer } from "./Footer";
-import { Signup } from "./Signup";
-import { Login } from "./Login";
-import { LogoutLink } from "./LogoutLink";
+import { BrowserRouter } from "react-router-dom";
+// import { Signup } from "./Signup";
+// import { Login } from "./Login";
+// import { LogoutLink } from "./LogoutLink";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Content />
-      <Footer />
-      <Signup />
-      <Login />
-      <LogoutLink />
+      <BrowserRouter>
+        <Header />
+        <Content />
+        {/* <Signup />
+        <Login />
+        <LogoutLink /> */}
+        <Footer />
+      </BrowserRouter>
     </div>
   )
 }

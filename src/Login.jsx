@@ -6,7 +6,7 @@ if (jwt) {
   axios.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
 }
 
-export function Login() {
+export function Login(props) {
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = (event) => {
@@ -43,7 +43,7 @@ export function Login() {
         <div>
           Password: <input name="password" type="password" />
         </div>
-        <button type="submit">Login</button>
+        <button onClick={() => props.onLogin(login)}>Login</button>
       </form>
     </div>
   );
