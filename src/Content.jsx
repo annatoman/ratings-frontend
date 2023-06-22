@@ -5,7 +5,8 @@ import { Routes, Route } from "react-router-dom";
 import { LandlordsIndex } from "./LandlordsIndex";
 // import { LandlordsNew } from "./LandlordsNew";
 // import { Modal } from "./Modal";
-import { LandlordsShow } from "./LandlordsShow";
+// import { LandlordsShow } from "./LandlordsShow";
+// import city from "./assets/city.png";
 
 export function Content() {
 
@@ -43,18 +44,18 @@ export function Content() {
     useEffect(handleIndexLandlords, []);
 
     return (
-      <div>
+        <div className="container bg-image">
         <Routes>
             <Route path="/landlords" element={<LandlordsIndex landlords={landlords}/> }/>
         </Routes>
-        Search: <input type="text" />
-        {/* <LandlordsShow /> */}
-        {/* <LandlordsIndex landlords={landlords} /> */}
-        {/* <LandlordsNew onCreateLandlord={handleCreateLandlord} /> */}
-        {/* <Login login={Login} /> */}
-        {/* <Modal show={isLoginVisible} onClose={handleClose}>
-            <p>test</p>
-        </Modal> */}
-      </div>
-    )
-  }
+            Search: <input type="text"/>
+            <button type="submit"> Submit </button>
+        </div>
+        )
+    }
+
+
+    // 1. Create Search Bar / Write HTML 
+    // 2. Make it a form that when submitted, sends axios request to the backend for the Show
+    // 3. Make landlord/:id page (frontend)
+    // 4. Push the end-user to /landlord/:id route on frontend

@@ -6,9 +6,9 @@ export function LandlordsIndex(props) {
         <h1>All Landlords</h1>
         {props.landlords.map((landlord) => (
             <div key ={landlord.id}>
-                <h2>{landlord.name}</h2>
+                <h3>{landlord.name}</h3>
                     <p>{landlord.city}</p>
-                    <p>{landlord.reviews.review}</p>
+                    <p>{landlord.reviews.rating}</p>
             </div>       
             ))}
       </div>
