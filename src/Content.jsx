@@ -49,7 +49,7 @@ export function Content() {
             <Route path="/landlords" element={<LandlordsIndex landlords={landlords}/> }/>
         </Routes>
             Search: <input type="text"/>
-            <button type="submit"> Submit </button>
+            <button className="btn btn-secondary" type="button" style={{borderRadius: '16px'}}> Submit </button>
         </div>
         )
     }
